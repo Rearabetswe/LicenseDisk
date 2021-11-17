@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  
 </head>
 <body>
+    <!--The script tag that will allow the usage of Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">License Disk Renewal</a>
+                
                 @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>*@
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>*@
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     @*<ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>*@
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>*@
                     <partial name="_LoginPartial.cshtml" />
                 </div>
             </div>
@@ -38,15 +43,46 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - License Disk Renewal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="page-footer font-small unique-color-dark text-center" id="footer">
+        <div style="background-color: #0c2f44">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h5 class="mb-0" style="color:white;">Connect with us on our social networks</h5>"
+                    </div>
+                    <!--Adding the social media icons-->
+                    <div class="flex-center">
+                        <!--For facebook Icon-->
+                        <a href="https://web.facebook.com/DoTransport/?_rdc=1&_rdr"> <!--Url to redirect the user to Facebook-->
+                            <ion-icon  name="logo-facebook"></ion-icon>
+                        </a> 
+                        <!--For Twitter Icon-->
+                        <a href="https://twitter.com/Dotransport"> <!--Url to redirect the user to Twitter-->
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+
+                        <!--LinkedIn Icon-->
+                        <a href="https://www.linkedin.com/company/department-of-transport_4/?originalSubdomain=za"> <!--Url to redirect the user to LinkedIn-->
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                        <!--For Instagram Icon -->
+                        <a href="https://www.instagram.com/dotransport/?hl=en"> <!--Url to redirect the user to Instagram-->
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+ 
     @*@await RenderSectionAsync("Scripts", required: false)*@
     @await RenderSectionAsync("Scripts", required: false)
+
+
 </body>
 </html>
